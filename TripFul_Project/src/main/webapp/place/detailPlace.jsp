@@ -423,9 +423,9 @@ $(function(){
   <h2>방문자 리뷰</h2>
 
 
-  <div class="review-card">
-    <jsp:include page="../Review/reviewList.jsp?place_num=<%=num %>"/>
-  </div>
+<jsp:include page="../Review/reviewList.jsp">
+  <jsp:param name="place_num" value="<%=num%>" />
+</jsp:include>
 	
 </div>
     </div>
