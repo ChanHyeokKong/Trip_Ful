@@ -295,8 +295,8 @@ function getStarClass(star) {
 <body id="review_body">
 
 	<!-- 모달 버튼 -->
-<div>
-	<button id="modalBtn"><i class="bi bi-pencil-square"></i>&nbsp;리뷰 작성</button>	
+<div >
+	<div class="input-group" >
 	<div class="rating-summary">
     <h4>별점 통계</h4>
     <div class="rating-row">
@@ -338,20 +338,24 @@ function getStarClass(star) {
         <strong>평균 별점: <span id="avgRating">0.0</span></strong> (<span id="totReview">0</span>개 리뷰)
     </div>
 </div>
-		<div >
+	<div class="review-form-wrapper">
+	<button id="modalBtn"><i class="bi bi-pencil-square"></i>&nbsp;리뷰 작성</button>	
+		<div class="radio_sort">
 			<label class="radio-label">
 				<input type="radio" class="sort" name="sort" value="latest" checked="checked">
-				<i class="bi bi-check-circle-fill"></i>최신순
+				<i class="bi bi-check-circle-fill"></i>&nbsp;최신순
 			</label>
 			<label class="radio-label" >
 				<input type="radio" class="sort" name="sort" value="likes">
-				<i class="bi bi-check-circle"></i>좋아요순
+				<i class="bi bi-check-circle"></i>&nbsp;좋아요순
 			</label>			
 			<label class="radio-label">
 				<input type="radio" class="sort" name="sort" value="rating">
-				<i class="bi bi-check-circle"></i>별점순
+				<i class="bi bi-check-circle"></i>&nbsp;별점순
 			</label>			
 		</div>
+	</div>
+	</div>
 	<div class="container mt-3">
 			
 			<div id="reviewCarousel" class="owl-carousel owl-theme">  

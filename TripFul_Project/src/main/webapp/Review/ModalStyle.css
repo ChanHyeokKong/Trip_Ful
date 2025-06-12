@@ -183,20 +183,20 @@
 
 /* 모달버튼 */
 #modalBtn {
-	padding: 8px 15px 8px 15px;
+	padding: 10px 15px 10px 15px;
 	min-width: 100px;
+	width:130px;
 	height: auto;
 	background: #fff;
 	color: #5877f9;
 	border: 1px solid #5877f9;
 	border-radius: 50px;
-	font-size: 15px;
+	font-size: 17px;
 	font-weight: 500;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center; 
+	cursor: pointer;	
 	margin: 5px;
+	
+	
 }
 #modalBtn:hover {
 	background : rgba(88, 119, 249, 0.1);

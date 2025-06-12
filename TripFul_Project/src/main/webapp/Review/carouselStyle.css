@@ -1,6 +1,13 @@
 @charset "UTF-8";
-
-
+.review-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 수평 중앙 정렬 */
+    justify-content: center;
+    
+    margin: 20px;
+    padding-left: 100px;
+}
 
 /* 캐러셀 내 카드 스타일 (Bootstrap 기본 카드 외 추가 스타일) */
 .item .card {
@@ -222,9 +229,9 @@ i.review_category:hover {
 }
 
 .liked{
-	display: flex; /* Flex 컨테이너로 설정 */
+	display: inline-flex; /* Flex 컨테이너로 설정 */
     justify-content: center; /* 요소들을 양 끝으로 벌립니다. (예: 날짜와 카테고리 아이콘) */
-    align-items: center; /* 요소들을 수직 중앙 정렬합니다. */
+    align-items: flex-end; /* 요소들을 수직 중앙 정렬합니다. */
     
     flex-wrap: nowrap; 
     min-width: 80px;
@@ -253,9 +260,10 @@ i.review_category:hover {
 /* 별점 평균 스타일 */
 /* rating-summary 컨테이너 */
 .rating-summary {
-    width: 100%;
-    max-width: 400px; /* 원하는 너비로 조절 */
-    margin: 20px 0;
+	display: inline-block;
+    width: 100%;   	
+    max-width: 500px; /* 원하는 너비로 조절 */
+    margin: 20px 0px 0px 20px;
     padding: 15px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -284,7 +292,7 @@ i.review_category:hover {
 /* 진행 바의 배경 컨테이너 */
 .progress-bar-container {
     flex-grow: 1; /* 남은 공간을 모두 차지하도록 설정 */
-    height: 10px; /* 바의 높이 */
+    height: 15px; /* 바의 높이 */
     background-color: #e9ecef; /* 바의 배경색 */
     border-radius: 5px;
     overflow: hidden; /* 내부 막대가 삐져나오지 않도록 */
@@ -317,12 +325,20 @@ i.review_category:hover {
 }
 
 /* 라디오 스타일 */
+.radio_sort{
+	 display: inline-block;
+	align-items: center;
+}
+
 .radio-label {
-    display: inline-flex;
-    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;   
+    flex-wrap: wrap;
     align-items: center;
-    margin: 10px;
-    cursor: pointer;
+    margin: 20px;
+    cursor: pointer;    
+    font-size: 17px;
+  
 }
 
 .radio-label input[type="radio"] {
