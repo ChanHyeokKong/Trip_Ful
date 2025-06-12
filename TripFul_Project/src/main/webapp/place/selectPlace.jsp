@@ -21,14 +21,6 @@
     referrerpolicy="no-referrer"
   />
     <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e9f5ff;
-            color: #212529;
-        }
-
         header {
             background-color: transparent;
             color: #212529;

@@ -25,6 +25,7 @@
 		%>
 			<script>
 				alert("페이지를 찾을 수 없습니다");
+				location.href='index.jsp?main=place/selectPlace.jsp';
 			</script>
 		<%
 				return;
@@ -45,12 +46,6 @@
 %>
 
 <style type="text/css">
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    background-color: #f5f5f5;
-}
-
 .container {
     max-width: 1000px;
     margin: 0 auto;
