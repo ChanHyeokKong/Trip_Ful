@@ -43,7 +43,7 @@ if (code == null || code.isEmpty()) {
 	kakaoLoginErrorMessage = "카카오 로그인 인증 과정에서 필요한 정보(code)가 누락되었습니다.";
 } else {
 	// --- 2. 카카오 클라이언트 정보 설정 ---
-	String clientId = "06960d1e88695098bafe3caf197a0a7e";
+	String clientId = "";
 
 	// 3. 콜백 URL (카카오 개발자 센터에 등록된 URL과 일치해야 함)
 	// ★★★ 중요: 토큰 요청 시 보내는 redirect_uri는 파라미터가 없는 깨끗한 버전이어야 합니다.

@@ -16,7 +16,7 @@
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <%
 // JavaScript 키를 JSP 변수에 저장 (예시)
-String kakaoJavascriptKey = "7395a37b7d425e6e61d666714ed9c297";
+String kakaoJavascriptKey = "";
 
 %>
 <script>
@@ -30,7 +30,7 @@ String kakaoJavascriptKey = "7395a37b7d425e6e61d666714ed9c297";
 String login = request.getParameter("login");
 String redirect = request.getParameter("redirect");
 String id = null;
-String clientId = "IajLk4vELxMTjBeM9JGp";//애플리케이션 클라이언트 아이디값";
+String clientId = "";//네이버 애플리케이션 클라이언트 아이디값";
 String redirectURI = URLEncoder.encode("http://localhost:8080/TripFul_Project/login/naverLoginAction.jsp?redirect="+redirect, "UTF-8");
 SecureRandom random = new SecureRandom();
 String state = new BigInteger(130, random).toString();

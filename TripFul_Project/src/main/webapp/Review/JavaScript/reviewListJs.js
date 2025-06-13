@@ -54,6 +54,7 @@ $(document).on("click", ".delete-btn", function(){
 $(document).on("click", ".delete-btn2", function(){
 	
 	var review_idx=$(this).attr("review_idx");
+	//console.log(review_idx);
 	var a=$(".reportListBtn").is(":checked");
 	console.log(a);
 	swal.fire({

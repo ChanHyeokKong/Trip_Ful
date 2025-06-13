@@ -10,6 +10,10 @@
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   
+  <%
+  String GoogleAPIKEY = ""; //구글 API KEY 입력
+  %>
+  
 
   <title>관광지 추가</title>
   <style>
@@ -452,7 +456,7 @@
   </script>
   
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpVlcErlSTHrCz7Y4h3_VM8FTMkm9eXAc&libraries=places&callback=initMap" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=<%=GoogleAPIKEY %>&libraries=places&callback=initMap" async defer></script>
 
 
 </body>

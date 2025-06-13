@@ -792,8 +792,8 @@ List<HashMap<String, String>> reportList=rdao.getReportReview();
 										</table>
 									</div>
 									<div class="modal-foot">														
-										<button type="button" id="Delete_btn" class="delete-btn2" review_idx="">삭제</button>
-										<button type="button" class="close" id="closeBtn">취소</button>
+										
+										<button type="button" class="close" id="closeBtn">닫기</button>
 									</div>
 								</form>
 							</div>		

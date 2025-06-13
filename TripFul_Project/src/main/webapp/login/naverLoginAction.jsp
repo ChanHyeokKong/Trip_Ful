@@ -42,8 +42,8 @@ if (code == null || state == null) {
 	naverLoginErrorMessage = "네이버 로그인 오류: " + request.getParameter("error_description");
 } else {
 	// --- 2. Naver 클라이언트 정보 설정 (보안상 JSP에 하드코딩하는 것은 권장되지 않음) ---
-	String clientId = "IajLk4vELxMTjBeM9JGp"; // ★★★ 실제 Naver 클라이언트 아이디로 변경하세요. ★★★
-	String clientSecret = "grEV0aBwgW"; // ★★★ 실제 Naver 클라이언트 시크릿으로 변경하세요. ★★★
+	String clientId = ""; // ★★★ 실제 Naver 클라이언트 아이디로 변경하세요. ★★★
+	String clientSecret = ""; // ★★★ 실제 Naver 클라이언트 시크릿으로 변경하세요. ★★★
 
 	// 3. 콜백 URL (Naver 개발자 센터에 등록된 URL과 일치해야 함)
 	String currentCallbackUrl = "http://localhost:8080/TripFul_Project/login/naverLoginAction.jsp";

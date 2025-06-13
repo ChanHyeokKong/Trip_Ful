@@ -27,7 +27,7 @@
 	//DB리스트
 	List<HashMap<String,String>> DBlist=dao.getPlaceList(place_num);
 	
-    String apiKey = "AIzaSyCKGdGbCxXFTXVCUSrJ5ktk_jpgeBdon6A"; // 여기에 본인의 API 키 입력
+    String apiKey = "GOOGLE_PLACE_API_KEY"; // 여기에 본인의 API 키 입력
     
   // String placeId = "ChIJod7tSseifDUR9hXHLFNGMIs"; // 예시: Sydney의 Google place ID
     

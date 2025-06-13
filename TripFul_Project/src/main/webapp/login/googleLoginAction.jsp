@@ -41,8 +41,8 @@ if (code == null || code.isEmpty()) {
 	googleLoginErrorMessage = "구글 로그인 인증 과정에서 필요한 정보(code)가 누락되었습니다.";
 } else {
 	// --- 2. 구글 클라이언트 정보 설정 ---
-	String clientId = "562446626383-a9laei72kvuogmlo252evitktevt7i81.apps.googleusercontent.com";
-	String clientSecret = "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"; // ★★★ 보안에 매우 중요하므로 실제로는 외부 파일에서 관리하는 것이 좋습니다 ★★★
+	String clientId = ""; //구글 클라이언트 아이디
+	String clientSecret = ""; // ★★★ 보안에 매우 중요하므로 실제로는 외부 파일에서 관리하는 것이 좋습니다 ★★★
 
 	// 3. 콜백 URL
 	String redirectURI = "http://localhost:8080/TripFul_Project/login/googleLoginAction.jsp";
@@ -181,6 +181,10 @@ if (code == null || code.isEmpty()) {
 		if (<%= dto.getAdmin() %> === 1) {
 			window.opener.document.location.href = "../index.jsp?main=page/adminMain.jsp";
 		} else {
+			<%if(finalRedirectUrl.equals("null")){
+				finalRedirectUrl = request.getContextPath()+"/index.jsp";
+			
+			}%>
 			window.opener.document.location.href = "<%= finalRedirectUrl %>";
 		}
 		window.close();

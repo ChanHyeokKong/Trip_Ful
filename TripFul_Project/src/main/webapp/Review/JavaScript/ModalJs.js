@@ -134,7 +134,7 @@ submitReviewBtn.click(function(e) {
         success: function(res) {
            // console.log("AJAX 작업 성공");
 		   var flag=res.trim();
-		   console.log(flag)
+		   //console.log(flag)
 		   if(flag=="true"){
 			
 		   shootConfetti();

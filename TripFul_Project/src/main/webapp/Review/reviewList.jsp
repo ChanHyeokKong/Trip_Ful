@@ -122,7 +122,7 @@ function loadReviews() {
 	                    reviewCard += "<a class='r_author' href='<%= request.getContextPath() %>/index.jsp?main=login/MyPage.jsp?id="+r.author+"'>" + r.author + "</a>";
                     	}
 	                    else{
-	                    	reviewCard += "<b>" + r.author + "</b>";
+	                    	reviewCard += "<b >" + r.author + "</b>";
 	                    }
 	                    reviewCard += "<div class='categorydate'>";
 	                    reviewCard += "<span class='review_writeday'>" + r.date + "</span>&nbsp;&nbsp;";
@@ -295,7 +295,7 @@ function getStarClass(star) {
 <body id="review_body">
 
 	<!-- 모달 버튼 -->
-<div >
+<div class="review_container">
 	<div class="input-group" >
 	<div class="rating-summary">
     <h4>별점 통계</h4>

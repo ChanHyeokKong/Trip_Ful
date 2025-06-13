@@ -2,6 +2,11 @@
 <%@page import="place.PlaceDao"%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
+
+<%
+String GoogleAPIKEY = ""; //여기에 API KEY 입력
+
+%>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -530,7 +535,7 @@
   
   
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpVlcErlSTHrCz7Y4h3_VM8FTMkm9eXAc&libraries=places&callback=initMap" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=<%=GoogleAPIKEY %>&libraries=places&callback=initMap" async defer></script>
 
 </body>
 </html>

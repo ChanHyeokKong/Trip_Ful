@@ -3,31 +3,45 @@
     display: flex;
     flex-direction: column;
     align-items: center; /* 수평 중앙 정렬 */
-    justify-content: center;
-    
+    justify-content: center;    
     margin: 20px;
     padding-left: 100px;
 }
+
 
 /* 캐러셀 내 카드 스타일 (Bootstrap 기본 카드 외 추가 스타일) */
 .item .card {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    min-height: 420px; /* 카드 최소 높이 설정 (내용이 적을 때 보기 좋게) */
+    min-height: 500px; /* 카드 최소 높이 설정 (내용이 적을 때 보기 좋게) */
     display: flex;
+    max-height: 500px;
     flex-direction: column;
     padding-bottom: 40px; 
     pointer-events: none;
 }
 
+
 a.r_author{
 	text-decoration: none;
 	color: black;
+	pointer-events: all;   
 	
 }
 .googlechk{
-	align-content: flex-end;	
+	
+	display: inline-flex; /* Flex 컨테이너로 설정 */
+    justify-content: flex-start; /* 요소들을 양 끝으로 벌립니다. (예: 날짜와 카테고리 아이콘) */
+    align-items: flex-end; /* 요소들을 수직 중앙 정렬합니다. */
+    
+    flex-wrap: nowrap; 
+    min-width: 80px;
+    padding-top: 5px;
+    position: absolute; /* 부모인 .card 기준으로 위치 지정 */
+    bottom: 10px;       /* .card의 하단에서 10px 위로 떨어뜨림 */
+    left: 20px;            /* .card의 왼쪽 끝에 정렬 */
+    width: 100%; 	
 }
 .googlereview, .review_writeday{
 	color: #ccc;	
@@ -72,20 +86,25 @@ div.img-con {
     display: flex;    
     flex-wrap: wrap;
     justify-content: inherit;
-    /* max-height:180px;
-    overflow: auto; */
-    
+    max-height: 160px;
+    overflow: auto;
+     pointer-events: all;
+}
+
+div.img-con:empty{
+	display: nono;
 }
 
 div.img-con img.photo {      
-    width: 170px; /* 이미지 높이 100% */   
-    height: 170px; /* 이미지 높이 100% */   
-    border-radius:10px;    
+    width: 150px; /* 이미지 높이 100% */   
+    height: 150px; /* 이미지 높이 100% */   
+    border-radius:10px;   
     margin: 5px;
     display: inline-flex; /* 인라인 블록처럼 작동하면서 내부 정렬 가능 */
     align-items: center; /* 내부 아이콘/텍스트 세로 중앙 정렬 */
     justify-content: center; /* 내부 아이콘/텍스트 가로 중앙 정렬 */
     box-sizing: border-box; 
+   
 }
 
 /* 별점 스타일 */
@@ -125,9 +144,9 @@ div.img-con img.photo {
 /* 텍스트 줄바꿈 유지 */
 .card-text {
     white-space: pre-wrap; /* 공백 및 줄바꿈 유지 */
-    max-height: 200px; 
+    height: auto; 
     overflow: auto; /* 넘치는 부분 숨김 */
-     pointer-events: all; 
+    pointer-events: all;     
 }
 
 
@@ -235,7 +254,7 @@ i.review_category:hover {
     
     flex-wrap: nowrap; 
     min-width: 80px;
-    
+    padding-top: 5px;
     position: absolute; /* 부모인 .card 기준으로 위치 지정 */
     bottom: 10px;       /* .card의 하단에서 10px 위로 떨어뜨림 */
     left: 0;            /* .card의 왼쪽 끝에 정렬 */
@@ -245,6 +264,7 @@ i.review_category:hover {
 	width: 30px;
 	height: 30px;
 	cursor: pointer;	
+	
 	pointer-events: all; /* 버튼 클릭 가능하게 설정 */
 	 padding: 5px 7.5px;
     border-radius: 20%; /* 원형 버튼 */    
@@ -261,13 +281,14 @@ i.review_category:hover {
 /* rating-summary 컨테이너 */
 .rating-summary {
 	display: inline-block;
-    width: 100%;   	
+    width: 100%;
+   	
     max-width: 500px; /* 원하는 너비로 조절 */
     margin: 20px 0px 0px 20px;
     padding: 15px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    
 }
 
 .rating-summary h4 {

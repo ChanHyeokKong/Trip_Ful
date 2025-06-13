@@ -23,7 +23,7 @@ function chkSignIn() {
 }
 
 function googleSign(finalUrl) {
-    const clientId = "562446626383-a9laei72kvuogmlo252evitktevt7i81.apps.googleusercontent.com"; // head의 메타 태그에 있는 클라이언트 ID
+    const clientId = ""; // 클라이언트 ID
     
     // ★ 수정: redirect_uri는 구글에 등록된 주소 그대로, 파라미터 없이 깨끗하게 유지합니다.
     const redirectUri = 'http://localhost:8080/TripFul_Project/login/googleLoginAction.jsp';
@@ -44,7 +44,7 @@ function naverSign(apiURL) {
 
 // 최종 목적지 주소를 인자로 받습니다.
 function kakaoSign(finalUrl) {
-	const kakaoRestApiKey = "06960d1e88695098bafe3caf197a0a7e"; // 카카오 REST API 키
+	const kakaoRestApiKey = "e"; // 카카오 REST API 키
 	
 	// ★★★ 수정: redirect_uri는 카카오에 등록된 주소 그대로, 깨끗하게 유지합니다.
 	const redirectUri = 'http://localhost:8080/TripFul_Project/login/kakaoLoginAction.jsp';
